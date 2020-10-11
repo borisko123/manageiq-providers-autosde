@@ -13,6 +13,8 @@ jobs:
           git fetch --no-tags --prune --depth=10 origin +refs/heads/*:refs/remotes/origin/*
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
       - name: Setup pronto
         run: gem install pronto pronto-rubocop
       - name: Run Pronto
